@@ -962,7 +962,11 @@ $(function(){
     </div>
 </div>
 <!--/hash-->
-
+<!--Banner-->
+<div id="Banner" class="container">
+      <a href="#"><img src="<%=request.getContextPath()%>/image/banner_1.jpg"/></a> 
+</div>
+<!--/Banner-->
     <section>
       <div class="container">
         <div class="row">

@@ -144,109 +144,46 @@
             </div>
           </div>
         </div><!--intro-->
-        
-        <article>
+
+        <div id="section"><!--scroll down-->
             <div class="container">
-                    <nav class="navbar navbar-default">
-                            <ol class="nav navbar-nav nav-indicators">
-                                <li data-target="#InCarousel" data-slide-to="0" class="InCarousel-target active" style="display: none"> 
-                                    <a href="#">아울러란</a>
-                                </li>
-                                <li data-target="#InCarousel" data-slide-to="1" class="InCarousel-target">
-                                    <a href="#">맞춤형 사이트</a>
-                                </li>
-                                <li data-target="#InCarousel" data-slide-to="2" class="InCarousel-target in_margin_left">
-                                    <a href="#">손 쉬운 지원방식</a>
-                                </li>
-                                <li data-target="#InCarousel" data-slide-to="3" class="InCarousel-target in_margin_left">
-                                    <a href="#">모든 정보를 하나로</a>
-                                </li>
-                            </ol>
-                        </nav>
+              <a href="#char_web" class="scroll">scroll down<span></span></a>
             </div>
-           
-                    
-            <div id="InCarousel" class="carousel">
-                <div class="carousel-inner">
-                          <div data-slide-no="0" class="item carousel-item active">
-                            <div class="wrapper">
-                              <img src="<%=request.getContextPath()%>/image/in_img3.png" class="img-responsive" style="width:50%; float: left;">
-                              <div class="in_intro">
-                                  <h1>
-                                      <span class="in_h1">아울러는</span>
-                                        <a class="carousel-control left" href="#InCarousel" data-slide="prev">
-                                          <span class="icon-prev"></span>
-                                        </a>
-                                        <a class="carousel-control right" href="#InCarousel" data-slide="next">
-                                          <span class="icon-next"></span>
-                                        </a>
-                                </h1>
-                                  <p>  웹 애니메이션을 제작하기 위해서는 다양한 분야의 직군들이 필요합니다. <br>
-                                    하지만 각 분야별 직군의 사람들은 본인의 분야 이외의 작업을 할 경우가 드물며 다른 직군의 제작자들을 찾는 데에도 시간적, 공간적 제약이 따르게 됩니다.<br> 
-                                    이와 같은 불편함을 해소시키기 위해 웹 애니메이션 제작자들이 협업할 사람들을 쉽고 편리하게 구할 수 있는 통합 서비스인 <strong>아울러</strong>가 등장했습니다.</p>
-                                    <button onclick="location.href = './Project.bo' " class="in_but">같이하기</button>
-                                  </div>
-                            </div>
-                          </div>
-                          <div data-slide-no="1" class="item carousel-item">
-                            <div class="wrapper">
-                              <img src="<%=request.getContextPath()%>/image/Characteristics_1.png" class="img-responsive" style="width:50%; height:auto;float: left;">
-                              <div class="in_intro">
-                                    <h1>
-                                        <span class="in_h1">맞춤형 웹사이트</span>
-                                          <a class="carousel-control left" href="#InCarousel" data-slide="prev">
-                                            <span class="icon-prev"></span>
-                                          </a>
-                                          <a class="carousel-control right" href="#InCarousel" data-slide="next">
-                                            <span class="icon-next"></span>
-                                          </a>
-                                  </h1>
-                                  <p> 아마추어 웹 애니메이션 제작자들의 웹 애니메이션 제작을 고려한 <br>팀원 모집 사이트</p>
-                                  <button onclick="location.href = './Project.bo' " class="in_but">같이하기</button>
-                                </div>
-                            </div>
-                          </div>
-                          <div data-slide-no="2" class="item carousel-item">
-                            <div class="wrapper">
-                                <img src="<%=request.getContextPath()%>/image/Characteristics_2.png" class="img-responsive" style="width:50%; height:auto;float: left;">
-                                <div class="in_intro">
-                                        <h1>
-                                            <span class="in_h1">손 쉬운 지원방식</span>
-                                              <a class="carousel-control left" href="#InCarousel" data-slide="prev">
-                                                <span class="icon-prev"></span>
-                                              </a>
-                                              <a class="carousel-control right" href="#InCarousel" data-slide="next">
-                                                <span class="icon-next"></span>
-                                              </a>
-                                      </h1>
-                                      <p>댓글 지원 형식을 사용한 간단한 지원방식</p>
-                                      <button onclick="location.href = './Project.bo' " class="in_but">같이하기</button>
-                                    </div>
-                            </div>
-                          </div>
-                          <div data-slide-no="3" class="item carousel-item">
-                            <div class="wrapper">
-                                <img src="<%=request.getContextPath()%>/image/Characteristics_3.png" class="img-responsive" style="width:50%; height:auto;float: left;">
-                                <div class="in_intro">
-                                        <h1>
-                                            <span class="in_h1">모든 정보를 하나로</span>
-                                              <a class="carousel-control left" href="#InCarousel" data-slide="prev">
-                                                <span class="icon-prev"></span>
-                                              </a>
-                                              <a class="carousel-control right" href="#InCarousel" data-slide="next">
-                                                <span class="icon-next"></span>
-                                              </a>
-                                      </h1> 
-                                      <p>팀원 모집과 공모전 정보를 통합적으로 볼수 있는 사이트</p>
-                                    <button onclick="location.href = './Project.bo' " class="in_but">같이하기</button>
-                            </div>
-                          </div>
-                </div>
-                   
-                        
-            </div>  
-        </article>
-        
+        </div>
+   <article>
+          <div id="char_web">
+              <div id="symbol_mean">
+                    <img src="<%=request.getContextPath()%>/image/logo1.png">
+                    <p><b>애니메이션 팀원 플랫폼</b><br><br>
+                         애니메이션은 혼자서 만들 수 있는게 아닙니다. <br>여러분에게 다양한 분야의 사람들을 소개하고자합니다.   
+                    </p>
+             </div>
+              <div class="vl"></div>
+              <div class="char">
+                  <div class="char_item">
+                      <h1>1</h1>
+                      <span class="item_con"><b>타겟 맞춤형</b> <br> 아마추어 웹 애니메이션 제작자들의 웹 애니메이션 제작을 고려한
+                        팀원 모집 사이트</span>
+                  </div>
+                  <img src="<%=request.getContextPath()%>/image/char_1.png"/>
+              </div>
+              <div class="char char_extra">
+                  <div class="char_item ">
+                      <h1>2</h1>
+                      <span class="item_con2"><b>손 쉬운 지원방식</b> <br>댓글 지원 형식을 사용한 간단한 팀원 지원방식 </span>
+                  </div>
+                  <img src="<%=request.getContextPath()%>/image/char_2.png">
+              </div>
+              <div class="char char_extra">
+                  <div class="char_item ">
+                      <h1>3</h1>
+                      <span class="item_con3"><b>타겟 맞춤형</b> <br>팀원 모집과 공모전 정보를 통합적으로 볼수 있는 사이트 </span>
+                  </div>
+                  <img src="<%=request.getContextPath()%>/image/char_3.jpg"/>
+              </div>
+              <input type="button" value="아울러" class="more_content" onclick="location.href = './Project.bo' "/>
+            </div>
+    </article>
         <div class="hr-sect"><a href="./Project.bo">최신 모집</a></div>
         <div class="latest_box">
        		<%for(int i=0; i<newly_list.size(); i++){ %>
