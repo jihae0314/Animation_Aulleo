@@ -268,6 +268,7 @@ public class ProBoardDao {
 							ProBoardDto.setBoa_d_day(rs.getInt("d_day"));
 							ProBoardDto.setBoa_num(rs.getInt("boa_num"));
 							ProBoardDto.setBoa_pro_period(rs.getString("boa_pro_period"));
+							ProBoardDto.setBoa_region(rs.getString("boa_region"));
 							list.add(ProBoardDto);
 						}
 						if(list.size()!=0) {
@@ -335,7 +336,7 @@ public class ProBoardDao {
 			for(int i=1; i<list.size();i++) {
 				sql+=" or boa_no="+list.get(i).getBoa_no();
 			}
-			
+			 
 			sql+=") group by tag_contents order by count(*) desc,tag_contents asc limit 5";
 		}
 		System.out.println("tag sql은 "+sql);
@@ -1366,7 +1367,7 @@ public int BoardInsert(ProBoardDto ProBoardDto) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql="select *,TO_DAYS(boa_rec_deadline)-TO_DAYS(now())as d_day from pro_board limit 2";
+		String sql="select *,TO_DAYS(boa_rec_deadline)-TO_DAYS(now())as d_day from pro_board order by boa_reg_date desc limit 4";
 		try {
 			connection = ds.getConnection();
 			pstmt = connection.prepareStatement(sql);

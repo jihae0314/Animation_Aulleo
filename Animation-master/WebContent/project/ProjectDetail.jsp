@@ -52,7 +52,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image⁄x-icon" href="<%=request.getContextPath()%>/image/final_logo(mini_size_2).png">
+    <link rel="shortcut icon" type="image⁄x-icon" href="<%=request.getContextPath()%>/image/logo1.png">
     <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
     <script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.js"></script>
@@ -65,13 +65,16 @@
 
     <link href="<%=request.getContextPath()%>/css/project_content.css" rel="stylesheet" type="text/css">
     <link href="<%=request.getContextPath()%>/css/project.css" rel="stylesheet" type="text/css">
-    <link href="<%=request.getContextPath()%>/css/index.css" rel="stylesheet" type="text/css"> <!--my css--> 
+    <link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet" type="text/css"> <!--my css--> 
     <script src="<%=request.getContextPath()%>/javascript/card_content.js" type="text/javascript"></script> 
     <script src="<%=request.getContextPath()%>/javascript/project_content.js" type="text/javascript"></script>
 
     <title>아울러:게시글 제목</title>
 </head>
 <script type="text/javascript">
+$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+});
 function star(boa_id) {
 	 console.log($('#i_'+boa_id).attr('src'));
 	 if($('#i_'+boa_id).attr('src')=='<%=request.getContextPath()%>/image/graystar.png'){
@@ -210,7 +213,7 @@ function star(boa_id) {
     <nav class="navbar navbar-default bs-white navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header_nav">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header_nav">
 
                     <span class="sr-only">Toggle navigation</span>
 
@@ -223,26 +226,25 @@ function star(boa_id) {
                     <span class="icon-bar"></span>
 
                   </button>
-          <a href="./Main.do"><img src="<%=request.getContextPath()%>/image/final_logo(header).png" alt="아울러" class="logo" style="padding:0px;"></a> <!--로고-->
+          <a href="./Main.do"><img src="<%=request.getContextPath()%>/image/logo3.png" alt="아울러" class="logo" style="padding:0px;"></a> <!--로고-->
         </div>
 
         <div class="collapse navbar-collapse" id="header_nav">
-          <ul class="nav navbar-nav header_title" style="margin:10px;">
-            <li ><a href="./Main.do">홈 <span class="sr-only">(current)</span></a></li>
-            <li><a class="active" href="./Project.bo">팀원모집 </a></li>
+          <ul class="nav navbar-nav header_title link-header" style="margin:10px;">
+            <li class="active"><a href="./Project.bo">팀원모집 </a></li>
             <li><a href="./Contest.co">공모전 정보</a></li>
             <li><a href="./Guide.do">가이드</a></li>
           </ul>
 
 
           <form class="navbar-form form-inline  navbar-right" role="search" action="./Project.bo" method="get" id="form_box" name="tag_search">
+          	
               <div class="input-group">
                  <input type="text" name="TagSearch" id="TagSearch" class="search-box" placeholder="#해시">
                  <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
-              
               <% if(MemberDto==null){%>
               
-                 <div class="input-group" style="clear:both">
+                 <div class="input-group link-header" style="clear:both">
                      <a href="./LoginForm.do">로그인</a>
                 </div></div>
                 <%}else if(MemberDto!=null){ %>
@@ -252,11 +254,11 @@ function star(boa_id) {
             <li class="dropdown">
               <a href="#"  class="dropdown-toggle navbar-img" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <h5 style="display: inline-block;"><%=MemberDto.getMem_id() %></h5>
-              <%if(MemberDto.getMem_icon().equals("profile.jpg")){ %>
+             <%if(MemberDto.getMem_icon().equals("profile.jpg")){ %>
               <img src="<%=request.getContextPath()%>/image/profile.jpg" class="img-circle" alt="Profile Image"/>
               <%}else{
             	  System.out.println("아이콘경로있음");%>
-            	  <img src="<%=request.getContextPath()%>/image/<%=MemberDto.getMem_icon()%>" class="img-circle" alt="Profile Image"/>
+            	  <img src="<%=request.getContextPath()%>/usericon/<%=MemberDto.getMem_icon()%>" class="img-circle" alt="Profile Image"/>
             	  <%} %>
               </a>
               <ul class="dropdown-menu">
@@ -309,10 +311,10 @@ function star(boa_id) {
                             <div id="proCon_U_1_block">
                                 <a href="./UserPageApp.do?mem_no=<%=ProBoardDto.getMem_no()%>">
                                 <%if(ProBoardDto.getMem_icon().equals("profile.jpg")){ %>
-                                <img src="<%=request.getContextPath()%>/image/profile.jpg" alt="User-img" class="proCon_User_img img-circle" data-toggle="tooltip" title="닉네임 페이지 보기" data-original-title="Default tooltip">
+                                <img src="<%=request.getContextPath()%>/image/profile.jpg" alt="User-img" class="proCon_User_img img-circle" data-toggle="tooltip" title="<%=ProBoardDto.getMem_nickname()%> 페이지 보기" data-original-title="Default tooltip">
                                 <%}else{
                               	  System.out.println("아이콘경로있음");%>
-                                	<img src="<%=request.getContextPath()%>/image/<%=ProBoardDto.getMem_icon()%>" alt="User-img" class="proCon_User_img img-circle" data-toggle="tooltip" title="닉네임 페이지 보기" data-original-title="Default tooltip">
+                                	<img src="<%=request.getContextPath()%>/usericon/<%=ProBoardDto.getMem_icon()%>" alt="User-img" class="proCon_User_img img-circle" data-toggle="tooltip" title="<%=ProBoardDto.getMem_nickname()%> 페이지 보기" data-original-title="Default tooltip">
                                 <% } %>
                                 </a>
                                 <p class="proCon_User_text"><%=ProBoardDto.getMem_nickname()%></p>
@@ -562,12 +564,16 @@ function star(boa_id) {
                               </a>
                             </h4>
                           </div>
+                          
+                          <%if(MemberDto!=null){
+                          if(writercheck==1 || list.get(i).getMem_no()==MemberDto.getMem_no()){%>
+                          
                           <div id="app_<%=list.get(i).getBoa_app_no()%>" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div id="support_pro" class=""><!--지원자 프로필-->
                                     <a href="#">
                                     
-                                    <img src="<%=request.getContextPath()%>/image/<%=list.get(i).getMem_icon()%>" alt="User-img" class="support_img img-circle" data-toggle="tooltip" title="닉네임 페이지 보기" data-original-title="Default tooltip">
+                                    <img src="<%=request.getContextPath()%>/image/<%=list.get(i).getMem_icon()%>" alt="User-img" class="support_img img-circle" data-toggle="tooltip" title="<%=ProBoardDto.getMem_nickname()%> 페이지 보기" data-original-title="Default tooltip">
 
                                     </a>
                                     <p class="support_text"><%=list.get(i).getMem_nickname()%><br><small><%=list.get(i).getMem_job()%></small></p>
@@ -617,6 +623,9 @@ function star(boa_id) {
                                         </div><!--/support_content_ask-->
                             </div><!--/panel-body-->
                         </div><!--/support-body-->
+                        <%
+                               } }%>
+                        
                     </div>  
                     	   
                     	   
@@ -724,9 +733,9 @@ function star(boa_id) {
                             <div id="card_User">
                               <a href="./UserPageApp.do?mem_no=<%=re_list.get(i).getMem_no()%>">
                               <%if(re_list.get(i).getMem_icon().equals("profile.jpg")){ %>
-                              <img src="<%=request.getContextPath()%>/image/profile.jpg" alt="User-img" class="projact_card_U img-circle" data-toggle="tooltip" title="닉네임 페이지 보기" data-original-title="Default tooltip">
+                              <img src="<%=request.getContextPath()%>/image/profile.jpg" alt="User-img" class="projact_card_U img-circle" data-toggle="tooltip" title="<%=ProBoardDto.getMem_nickname()%> 페이지 보기" data-original-title="Default tooltip">
                                <%}else{ %>
-                            	  <img src="<%=request.getContextPath()%>/image/<%=re_list.get(i).getMem_icon()%>" alt="User-img" class="projact_card_U img-circle" data-toggle="tooltip" title="닉네임 페이지 보기" data-original-title="Default tooltip"> 
+                            	  <img src="<%=request.getContextPath()%>/image/<%=re_list.get(i).getMem_icon()%>" alt="User-img" class="projact_card_U img-circle" data-toggle="tooltip" title="<%=ProBoardDto.getMem_nickname()%> 페이지 보기" data-original-title="Default tooltip"> 
 								<%} %>
 
                               </a>
@@ -829,7 +838,7 @@ function star(boa_id) {
         
 	  </main>
 	  </div>
-<footer style="clear:both; background-color: white;">
+<footer style="clear:both;">
     <div id="copyright" class="container">
       <p>성결대학교 미디어소프트웨어학부 <br> 2019 <strong>아울러.</strong> 인지해 정나영 한수지</p>
     </div>

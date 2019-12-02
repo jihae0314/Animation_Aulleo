@@ -13,7 +13,8 @@ if(session.getAttribute("Member")!=null){
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="<%=request.getContextPath()%>/css/index.css" rel="stylesheet" type="text/css"> <!--my css-->
+    <link rel="shortcut icon" type="image⁄x-icon" href="<%=request.getContextPath()%>/image/logo1.png">
+    <link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet" type="text/css"> <!--my css-->
     <link href="<%=request.getContextPath()%>/css/guide.css" rel="stylesheet" type="text/css"> <!--my css-->
     <link rel="shortcut icon" type="image⁄x-icon" href="<%=request.getContextPath()%>/image/final_logo(mini_size_2).png">
 
@@ -25,7 +26,7 @@ if(session.getAttribute("Member")!=null){
     <title>함께 만들어가다. : 아울러</title>
 </head>
 <body>
-<header>
+ <header>
     <!------------- Navbar -------------->
     <nav class="navbar navbar-default bs-white navbar-fixed-top">
         <div class="container">
@@ -43,12 +44,11 @@ if(session.getAttribute("Member")!=null){
                     <span class="icon-bar"></span>
 
                   </button>
-          <a href="./Main.do"><img src="<%=request.getContextPath()%>/image/final_logo(header).png" alt="아울러" class="logo" style="padding:0px;"></a> <!--로고-->
+          <a href="./Main.do"><img src="<%=request.getContextPath()%>/image/logo3.png" alt="아울러" class="logo" style="padding:0px;"></a> <!--로고-->
         </div>
 
         <div class="collapse navbar-collapse" id="header_nav">
-          <ul class="nav navbar-nav header_title" style="margin:10px;">
-            <li><a href="./Main.do">홈 <span class="sr-only">(current)</span></a></li>
+          <ul class="nav navbar-nav header_title link-header" style="margin:10px;">            
             <li><a href="./Project.bo">팀원모집 </a></li>
             <li><a href="./Contest.co">공모전 정보</a></li>
             <li class="active"><a href="./Guide.do">가이드</a></li>
@@ -62,7 +62,7 @@ if(session.getAttribute("Member")!=null){
                  <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
               <% if(MemberDto==null){%>
               
-                 <div class="input-group" style="clear:both">
+                 <div class="input-group link-header" style="clear:both">
                      <a href="./LoginForm.do">로그인</a>
                 </div></div>
                 <%}else if(MemberDto!=null){ %>
@@ -76,7 +76,7 @@ if(session.getAttribute("Member")!=null){
               <img src="<%=request.getContextPath()%>/image/profile.jpg" class="img-circle" alt="Profile Image"/>
               <%}else{
             	  System.out.println("아이콘경로있음");%>
-            	  <img src="<%=request.getContextPath()%>/image/<%=MemberDto.getMem_icon()%>" class="img-circle" alt="Profile Image"/>
+            	  <img src="<%=request.getContextPath()%>/usericon/<%=MemberDto.getMem_icon()%>" class="img-circle" alt="Profile Image"/>
             	  <%} %>
               </a>
               <ul class="dropdown-menu">
@@ -106,7 +106,7 @@ if(session.getAttribute("Member")!=null){
                             <p>해시검색에 찾고자하는 해시태그를 입력합니다.</p>
                             <img alt="hash_2_img" src="<%=request.getContextPath()%>/image/guide_img/hash_2.jpg" class="guide_img">
                         </div> 
-
+ 
                     <input type="radio" name="tabs" id="tabtwo">     
                     <label for="tabtwo">등록</label> 
                         <div class="tab"> 
@@ -114,7 +114,7 @@ if(session.getAttribute("Member")!=null){
                             <p>팀원모집 페이지에 있는 모집글 등록 버튼을 클릭합니다.</p>
                             <img alt="" src="<%=request.getContextPath()%>/image/guide_img/Registration_1.jpg" class="guide_img2">
                             <p>모집글 등록페이지에서 기본적인 사항과 추가사항을 입력합하고 등록버튼을 클릭해 줍니다.</p>
-                            <img alt="" src="<%=request.getContextPath()%>/image/guide_img/Registration_2.jpg" class="guide_img2">
+                            <img alt="" src="<%=request.getContextPath()%>/image/guide_img/Registration_2.jpg" class="guide_img2 guide_Registration2">
                             <p>자신의 모집글이 등록되었는지 확인합니다.</p>
                             <img alt="" src="<%=request.getContextPath()%>/image/guide_img/Registration_3.jpg" class="guide_img2">
                         </div> 
@@ -144,7 +144,7 @@ if(session.getAttribute("Member")!=null){
 
     </main>
 
-    <footer style="clear:both; background-color: white;">
+    <footer style="clear:both; ">
       <div id="copyright" class="container">
         <p>성결대학교 미디어소프트웨어학부 <br> 2019 <strong>아울러.</strong> 인지해 정나영 한수지</p>
       </div>
