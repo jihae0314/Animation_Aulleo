@@ -23,3 +23,5 @@
 * 마이페이지는 자신이 등록한 팀원 모집글과 다른 사용자의 모집글에 지원한 내용과 스랩을 볼 수 있다. 이 페이지에서 회원 정보를 탈퇴하고 수정할 수 있는 페이지로 갈 수 있게 했다.
 
 ## -결과 화면
+<img src="https://user-images.githubusercontent.com/52826839/70029985-93d61480-15eb-11ea-9523-6093d61ce12d.jpg" height=800px; float=left;  width=45%px/><img src="https://user-images.githubusercontent.com/52826839/70030054-be27d200-15eb-11ea-8eb6-c1b7b881f495.png" width=55%px height=800px; float=left;/>
+<img src="https://user-images.githubusercontent.com/52826839/70031747-43f94c80-15ef-11ea-8fb8-935a8f11edea.png" height=500px; float=left;  width=50%px/><img src="https://user-images.githubusercontent.com/52826839/70031856-920e5000-15ef-11ea-81ab-b66f29677f3c.png" height=500px; float=left;  width=50%px/>
